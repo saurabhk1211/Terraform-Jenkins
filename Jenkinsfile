@@ -26,7 +26,7 @@ pipeline {
                 bat '''
                 dir
                 cd terraform
-                dir
+                terraform init
                 '''
             }
         }
