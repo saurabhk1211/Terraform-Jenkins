@@ -23,8 +23,11 @@ pipeline {
 
         stage('Plan') {
             steps {
-                bat 'cd terraform'
-                bat 'dir'
+                bat '''
+                dir
+                cd terraform
+                dir
+                '''
             }
         }
         stage('Approval') {
