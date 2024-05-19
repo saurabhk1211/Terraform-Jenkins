@@ -55,7 +55,10 @@ pipeline {
 
         stage('Apply') {
             steps {
-                sh "pwd;cd terraform/ ; terraform apply -input=false tfplan"
+                 bat '''
+                cd terraform 
+                C:\\Users\\LENOVO\\OneDrive\\Desktop\\Terraform\\terraform.exe apply -input=false tfplan
+                '''
             }
         }
     }
