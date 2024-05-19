@@ -24,8 +24,6 @@ pipeline {
         stage('Plan') {
             steps {
                 bat '''
-                dir
-                cd terraform
                 terraform init
                 '''
             }
