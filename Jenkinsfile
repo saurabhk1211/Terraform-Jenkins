@@ -24,7 +24,16 @@ pipeline {
         stage('Plan') {
             steps {
                 bat '''
-                terraform init
+                cd terraform 
+                C:\\Users\\LENOVO\\OneDrive\\Desktop\\Terraform\\terraform.exe init
+                '''
+                bat '''
+                cd terraform 
+                C:\\Users\\LENOVO\\OneDrive\\Desktop\\Terraform\\terraform.exe plan -out tfplan
+                '''
+                bat '''
+                cd terraform 
+                C:\\Users\\LENOVO\\OneDrive\\Desktop\\Terraform\\terraform.exe show -no-color tfplan > tfplan.txt
                 '''
             }
         }
